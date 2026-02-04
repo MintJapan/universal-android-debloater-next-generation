@@ -10972,6 +10972,14 @@
     "labels": [],
     "removal": "Expert"
   },
+  "com.android.appsearch.apk": {
+    "list": "Aosp",
+    "description": "AppSearch (OEM signed, GMS-free) https://developer.android.com/jetpack/androidx/releases/appsearch\nAn on-device search library for managing locally stored structured data, with APIs for indexing data and retrieving data using full-text search. Use it to build custom in-app search capabilities for your users.\nThis is an mainline module package but built by the OEM, which means it doesn't rely on GMS to update.\nGood explanation of what mainline modules are: https://www.xda-developers.com/android-project-mainline-modules-explanation/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   "com.google.android.apps.assistant": {
     "list": "Google",
     "description": "Google Assistant Go (https://play.google.com/store/apps/details?id=com.google.android.apps.assistant)\nGo apps are lite-versions of their normal counterparts, made for low-RAM devices.",
@@ -11058,7 +11066,15 @@
   },
   "com.google.android.networkstack.tethering": {
     "list": "Aosp",
-    "description": "Uninstalling/Disabling this app will break Hotspot and Bluetooth/USB Tethering.\nOn some devices, when you enable hotspot or Bluetooth/USB Tethering it will show the boot animation (not bootloop) (not on HyperOS 2.0) And will bring you back to your device\nIt's safe to uninstall it if you aren't going to use Hotspot or Bluetooth/USB Tethering.\n On HyperOS 2.0, you'll need to remove it twice and reboot each time for it to fully vanish. It restores itself after first removal and reboot.\nOn HyperOS 2.0, after removing this package fully, it makes the whole settings app crash when clicking the Developer Settings button, making the Developer Settings inaccessible.\nEven when calling Developer Settings from another app, or calling usb debugging settings from another app, it all still refuses to launch, just crashes.\nIt basically puts you into a trap if you've disabled USB Debugging, as you'll no longer be able to turn USB Debugging back on, and so won't be able to restore this nor other removed packages. Access to ADB will be permanently lost.\nAfter restoring it, a reboot is required for the developer settings and hotspot to become accessible. Similar behavior to as described here might be also observed on other devices.",
+    "description": "Tethering module\nAn mainline module which manages all tethering-related functionalities. Uninstalling/Disabling this app will break Hotspot and Bluetooth/USB Tethering.\nOn some devices, when you enable hotspot or Bluetooth/USB Tethering it will show the boot animation (not bootloop) (not on HyperOS 2.0) And will bring you back to your device\nIt's safe to uninstall it if you aren't going to use Hotspot or Bluetooth/USB Tethering.\n On HyperOS 2.0, you'll need to remove it twice and reboot each time for it to fully vanish. It restores itself after first removal and reboot.\nOn HyperOS 2.0, after removing this package fully, it makes the whole settings app crash when clicking the Developer Settings button, making the Developer Settings inaccessible.\nEven when calling Developer Settings from another app, or calling usb debugging settings from another app, it all still refuses to launch, just crashes.\nIt basically puts you into a trap if you've disabled USB Debugging, as you'll no longer be able to turn USB Debugging back on, and so won't be able to restore this nor other removed packages. Access to ADB will be permanently lost.\nAfter restoring it, a reboot is required for the developer settings and hotspot to become accessible. Similar behavior to as described here might be also observed on other devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.android.networkstack.tethering": {
+    "list": "Aosp",
+    "description": "Tethering module (OEM signed, GMS-free)\nAn mainline module which manages all tethering-related functionalities.\nUninstalling not recommended as there are cases where adb access is lost or system became unstable in some devices.\nThis is an mainline module package but built by the OEM, which means it doesn't rely on GMS to update.\nGood explanation of what mainline modules are: https://www.xda-developers.com/android-project-mainline-modules-explanation/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -29245,7 +29261,15 @@
   },
   "com.google.android.ext.shared": {
     "list": "Aosp",
-    "description": "Android Shared Library.\nMaybe people thinking it's safe to remove or it's useless because it's empty.\nbut it cause bootloop on my miui 14.",
+    "description": "Android Shared Library.\nStub for system shared library. Maybe people thinking it's safe to remove or it's useless because it's empty.\nbut it cause bootloop on my miui 14.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "android.ext.shared": {
+    "list": "Aosp",
+    "description": "Android Shared Library (OEM signed, GMS-free)\nStub for system shared library.\nThis is an mainline module package but built by the OEM, which means it doesn't rely on GMS to update.\nGood explanation of what mainline modules are: https://www.xda-developers.com/android-project-mainline-modules-explanation/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -29501,6 +29525,14 @@
     "labels": [],
     "removal": "Unsafe"
   },
+  "com.android.networkstack": {
+    "list": "Aosp",
+    "description": "Network Stack (OEM signed, GMS-free) https://source.android.com/docs/core/ota/modular-system/networking\nProvides common IP services, network connectivity monitoring, and captive login portal detection.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
   "com.google.android.networkstack.permissionconfig": {
     "list": "Aosp",
     "description": "Network Stack Permission Configuration\nDefines a permission that enables modules to perform network-related tasks.\nhttps://source.android.com/devices/architecture/modular-system/networking\n",
@@ -29528,6 +29560,14 @@
   "com.google.android.permissioncontroller": {
     "list": "Aosp",
     "description": "Permission controller\nControls app permissions.\nhttps://source.android.com/devices/architecture/modular-system/permissioncontroller",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.android.permissioncontroller": {
+    "list": "Aosp",
+    "description": "PermissionController (OEM signed, GMS-free) https://source.android.com/docs/core/ota/modular-system/permissioncontroller\nAn mainline module which controls app permissions.\nThis is an mainline module package but built by the OEM, which means it doesn't rely on GMS to update.\nGood explanation of what mainline modules are: https://www.xda-developers.com/android-project-mainline-modules-explanation/",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
