@@ -1,4 +1,12 @@
 {
+  "org.lineageos.jelly": {
+    "list": "Oem",
+    "description": "LineageOS Browser App, based on chromium.\nSafe to remove if you don't need it or have replaced it with another app.\nOtherwise there will be no browser app on your device.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   "org.lineageos.recorder": {
     "list": "Oem",
     "description": "LineageOS Voice Recorder App.\nSafe to remove if you don't need it or have replaced it with another app.",
@@ -4521,7 +4529,7 @@
   },
   "com.motorola.systemserver": {
     "list": "Oem",
-    "description": "Moto Service Experience, debugging app.",
+    "description": "Moto Service Experience, debugging app.\nKeep this package for consistent Moto Fast Flashlight Gesture Functionality.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5707,7 +5715,7 @@
   },
   "com.samsung.android.smartmirroring": {
     "list": "Oem",
-    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV (https://www.samsung.com/us/apps/smart-view-2/)\nDependency for com.samsung.android.video",
+    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV (https://www.samsung.com/us/apps/smart-view-2/)\nDependency for com.samsung.android.video\nUninstalling this breaks edge panels feature; edge panel won't work and will also crash OneUI Home when trying to switch edge panels on from settings > display.\nThe edge panels package (com.samsung.android.app.cocktailbarservice and com.samsung.android.app.appsedge) doesn't exist on my phone so maybe on newer devices Samsung moved that functionality to this package instead. Tested on Galaxy S25 FE Android 16",
     "dependencies": [],
     "neededBy": [
       "com.samsung.android.video"
@@ -5915,6 +5923,14 @@
   "com.samsung.android.widgetapp.yahooedge.sport": {
     "list": "Oem",
     "description": "Special edge panel widget for Yahoo Sport\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.widgetapp.yahooedge.news": {
+    "list": "Oem",
+    "description": "Special edge panel widget for Yahoo News\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7586,7 +7602,7 @@
   },
   "com.samsung.android.honeyboard": {
     "list": "Oem",
-    "description": "Samsung keyboard\nWARNING: do NOT disable if you don't have another keyboard with direct boot mode support, or you'll be stuck at boot (no keyboard to unlock the phone).\nhttps://developer.android.com/training/articles/direct-boot\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\nWARNING: Removing this packages breaks the Accessibility settings on Android 11.",
+    "description": "Samsung keyboard\nWARNING: do NOT disable if you don't have another keyboard with direct boot mode support, or you'll be stuck at boot (no keyboard to unlock the phone).\nhttps://developer.android.com/training/articles/direct-boot\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\nWARNING: Removing this packages breaks the Accessibility settings on Android 11.\nWARNING: Removing this packages breaks the edge panel clipboard.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9266,7 +9282,7 @@
   },
   "com.oneplus.soundrecorder": {
     "list": "Oem",
-    "description": "Recorder\nOnePlus sound recording app.\nRequires turning on\"Allow modifying system settings\" to use for some reason? Probably tied to recording phone-calls.",
+    "description": "Recorder\nOnePlus sound recording app. Requires turning on\"Allow modifying system settings\" to use for some reason? Probably tied to recording phone-calls.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -13958,7 +13974,7 @@
   },
   "com.microsoft.office.powerpoint": {
     "list": "Misc",
-    "description": "",
+    "description": "PowerPoint\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -22512,7 +22528,7 @@
     "labels": []
   },
   "com.coloros.assistantscreen": {
-    "description": "HeyTap Shelf. ColorOS 'At a Glance'.\nShelf provides a variety of widgets that let you access important information or services from apps with ease. Removing will also be unable to access third-party widgets in ColorOS 16\nSwipe down on the Home screen to enter Shelf.\nhttps://play.google.com/store/apps/details?id=com.coloros.assistantscreen",
+    "description": "Shelf. ColorOS/OnePlus 'At a Glance'.\nShelf provides a variety of widgets that let you access important information or services from apps with ease. Removing will also be unable to access third-party widgets (these are different from the 'normal' widgets in any launcher) in ColorOS 16/OxygenOS 16\nSwipe down on the Home screen to enter Shelf.\nhttps://play.google.com/store/apps/details?id=com.coloros.assistantscreen",
     "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
@@ -22577,7 +22593,7 @@
     "labels": []
   },
   "com.coloros.accessibilityassistant": {
-    "description": "Another thing for smart assistant",
+    "description": "AI VoiceScribe.\nIt's used to convert speech to text in real-time for accessibility purposes. Can be safely deleted if you don't use AI services.",
     "removal": "Recommended",
     "list": "Oem",
     "dependencies": [],
@@ -23002,8 +23018,8 @@
     "labels": []
   },
   "com.coloros.weather.service": {
-    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive.\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585",
-    "removal": "Unsafe",
+    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive.\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585. Disabling instead does not seem to cause this problem, see \nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585#issuecomment-3796739025",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -23058,7 +23074,7 @@
     "labels": []
   },
   "com.oplus.postmanservice": {
-    "description": "Calibration, scan QR code test",
+    "description": "Diagnostics\nFor calibration of hardware",
     "removal": "Recommended",
     "list": "Oem",
     "dependencies": [],
@@ -23442,8 +23458,8 @@
     "labels": []
   },
   "com.oplus.audio.effectcenter": {
-    "description": "AudioEffectCenter\nDolby support for Chinese apps and some Google. It's so bloated.",
-    "removal": "Recommended",
+    "description": "Sound effects and EQ settings, Dolby support for Chinese apps and some Google. Remove if you aren't planning to use sound effects or EQ.",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -27209,7 +27225,7 @@
     "labels": []
   },
   "com.oplus.romupdate": {
-    "description": "Update Service\nIf you wanna remove it to keep ram, it's a bad idea. Better remove com.oplus.ota too if you don't plan to update system.",
+    "description": "Update Service\nResponsible for installing updates.",
     "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
@@ -27545,8 +27561,8 @@
     "labels": []
   },
   "com.oplus.linker": {
-    "description": "OPSynergy\nUsed for the Synergy app to link your phone to your PC (It doesn't work well beyond controlling your phone from your PC).",
-    "removal": "Recommended",
+    "description": "OPSynergy\nUsed for the Synergy app to link your phone to your PC (it doesn't work well beyond controlling your phone from your PC). This app is a dependency of screencast. Disabling will cause the screencast app to break.",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -27891,6 +27907,14 @@
     "neededBy": [],
     "labels": []
   },
+  "com.oppo.usercenter": {
+    "description": "Just bloatware for account details and marketing of OPPO. Cannot log into OPPO/HeyTap account after disabling. Safe to disable if OPPO account is not used.",
+    "removal": "Advanced",
+    "list": "Oem",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": []
+  },
   "com.coloros.findmyphone": {
     "description": "Find phone\nFind phone, logout from oppo account before",
     "removal": "Recommended",
@@ -28012,7 +28036,7 @@
     "labels": []
   },
   "com.oplus.trafficmonitor": {
-    "description": "OnePlus Data usage\nOneplus traffic monitor (monthly data usage, etc). If removed, the 'Data Usage' option under 'Mobile network' will not work. Also App Info screen's 'Data usage' option will disappear",
+    "description": "OnePlus Data usage / OnePlus traffic monitor (monthly data usage, etc). If removed, the 'Data Usage' option under 'Mobile network' will not work. Also App Info screen's 'Data usage' option will disappear. Required to restrict an app from accessing the network via settings > app info.",
     "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
@@ -31335,7 +31359,7 @@
   },
   "com.transsnet.store": {
     "list": "Oem",
-    "description": "Palm Store. App store with unsecure apps and probably malware. Has ads trackers and lot of intrusives permissions. Shows intrusive ads and popups.\nPithus analysis: https://beta.pithus.org/report/35d762b27c9e16703adf1731b74bef2c53a753b6a7475c425bced53b553758e5",
+    "description": "Palm Store. App store with unsecure apps and probably malware. Has ads trackers and lot of intrusives permissions. Shows intrusive ads and popups.\nRequired for one-time removal of \"Hot Apps\" folder in XOS Launcher (via long press and \"Properties\").\nPithus analysis: https://beta.pithus.org/report/35d762b27c9e16703adf1731b74bef2c53a753b6a7475c425bced53b553758e5",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31511,13 +31535,13 @@
   },
   "com.oplus.cosa": {
     "list": "Oem",
-    "description": "APP Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\nCannot be uninstalled but it can be disabled. Note: removing this package prevents the OnePlus Game Center to detect games.\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.",
+    "description": "APP Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\nCannot be uninstalled but it can be disabled. Note: removing this package prevents the OnePlus Game Center to detect games.\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.\nAnother note: the process is necessary for the GameEventServiceService which ensures that apps recognized as games have a fixed refresh rate, not an adaptive refresh rate; without it, refresh rates may be reduced from 120hz to 60hz. When there is not much going on on screen, there can even be drops in the refresh rate to 30hz and 1hz. There is no option to turn off adaptive refresh rate, so one is reliant on this OS service to undo its own damage. Without this, there also seems to be no way to display 120fps cloud gaming at 120hz (tested with Moonlight/Artemsi), as the OS does not exempt the streaming app from the adaptive refresh rate rule.",
     "dependencies": [],
     "neededBy": [
       "com.oneplus.gamespace"
     ],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.oplus.blur": {
     "list": "Oem",
@@ -31754,7 +31778,7 @@
   },
   "com.coloros.compass2": {
     "list": "Oem",
-    "description": "ColorOS default compass app\nKeep in mind that by using this app you give your location to the weather Oppo servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
+    "description": "ColorOS and OxygenOS 16's default compass app\nKeep in mind that by using this app you give your location to the weather Oppo/OnePlus servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31820,7 +31844,7 @@
   },
   "com.coloros.video": {
     "list": "Oem",
-    "description": "Video Player\nDefault Oppo video player with too much permissions (21) for a video player!\nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
+    "description": "Video Player\nDefault Oppo and OnePlus video player with too much permissions (21) for a video player!\nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31828,7 +31852,7 @@
   },
   "com.heytap.browser": {
     "list": "Oem",
-    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo and OnePlus devices. Full of ads and spams you in notifications. You should never use this browser\nHeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -34886,6 +34910,14 @@
     "labels": [],
     "removal": "Expert"
   },
+    "com.sec.android.app.tfunlock": {
+    "list": "Carrier",
+    "description": "The unlocking interface and process when unlocking a Tracfone-based phone. Probably needed for unlocking your carrier status. probably needed if you want to unlock your phone from a Tracfone service.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   "com.sec.android.app.tourviewer": {
     "list": "Oem",
     "description": "3d tour image, Virtual tour, Viewer used to view photos taken with the Galaxy S5 camera's Virtual Tour Shot mode.",
@@ -35928,7 +35960,7 @@
   },
   "com.oplus.cota": {
     "list": "Oem",
-    "description": "Carrier software updater?\nLooks like software updater for carrier phones.",
+    "description": "Configuration Update Over The Air\nNeeded for OTA updates. Likely needed to download and install system updates, device configuration, and carrier/enterprise customizations on OnePlus devices. It ensures your device stays up-to-date and compliant with carrier or company requirements, and interacts with the user only when necessary (e.g., update dialogs, legal statements).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -35997,6 +36029,38 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+    "com.oplus.aicall": {
+    "list": "Oem",
+    "description": "Provides AI summaries in the ODialer app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.oplus.aimemory": {
+    "list": "Oem",
+    "description": "Mind Space (also called 'Breeno Memory')\nSaves and summarizes content using AI. Runs on the background, even though when you're not using it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+    "com.oplus.aiwriter": {
+    "list": "Oem",
+    "description": "AI Writer\nPop-up for AI text generation, often appears in places that are not text input fields.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+    "com.oplus.aipaint": {
+    "list": "Oem",
+    "description": "AI Paint\nUnsure what it's used for but probably has to do with editing images.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   "com.oplus.apprecover": {
     "list": "Oem",
@@ -42091,6 +42155,38 @@
   "com.telenav.app.android.bell": {
     "list": "Carrier",
     "description": "Bell Navigator app. It works, but there are much better Maps apps available. https://play.google.com/store/apps/details?id=com.telenav.app.android.bell",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.apple.atve.androidtv.appletv": {
+    "list": "Oem",
+    "description": "Apple TV\nFactory-installed Apple TV app. Reverts to factory-version when uninstalled by normal means.\n(Shipped with Philips Android TVs, but may be present on other devices as well.)\nhttps://play.google.com/store/apps/details?id=com.apple.atve.androidtv.appletv",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.android.networkstack.tethering.inprocess": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.a20.d01.wallpapermulti": {
+    "list": "Oem",
+    "description": "Seems like a completely useless empty package, but the default lock screen wallpaper slideshow stops working if you uninstall this. Wallpapers can still be set fine, so it's still pretty useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.timezone.data_R": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless. No issues with the clock after uninstalling",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
